@@ -1,0 +1,10 @@
+
+.main-header{
+    background-color: #01579b;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    margin: 0;
+    text-align: center;
+    padding: 3vh 0;
+}

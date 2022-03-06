@@ -2,14 +2,6 @@
     text-align: center;
 }
 
-.Search-Header{
-    background-color: #01579b;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 200;
-    margin: 0;
-    padding: 3vh 0;
-}
 
 .Search-Main{
     display: flex;

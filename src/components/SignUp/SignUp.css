@@ -1,0 +1,17 @@
+.SignUp-Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 40vh;
+    margin: 0 20vw 0;
+}
+
+.SignUp-Main TextField{
+    margin: 0 0 3em 0
+}
+
+.form-box{
+    width: 50vw;
+    
+}
