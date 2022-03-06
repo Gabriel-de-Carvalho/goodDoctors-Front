@@ -12,7 +12,7 @@ export default function SignUp(){
                     <TextField
                         fullWidth 
                         required
-                        id="name-input"
+                        id="name-inp"
                         label="Nome"
                         type="search"
                         variant="standard"
