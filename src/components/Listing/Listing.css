@@ -1,0 +1,9 @@
+.Listing-Main {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.doctor{
+    flex: 1 0 50%
+}

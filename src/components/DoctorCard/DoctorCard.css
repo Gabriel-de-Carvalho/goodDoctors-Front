@@ -1,0 +1,29 @@
+.DoctorCard-Main {
+    border: 2px solid #000000;
+    width: 20%;
+    border-radius: 5%;
+    text-align: center;
+    flex: 1 0 25%;
+    margin: 2% 2%;
+}
+
+.doctorName{
+    margin-bottom: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+}
+
+.doctorSpecialty{
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+}
+
+.dot {
+    margin-top: 2vh;
+    height: 10vh;
+    width: 10vh;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
