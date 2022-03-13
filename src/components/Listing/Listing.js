@@ -1,41 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DoctorCard from "../DoctorCard/DoctorCard";
 import Header from "../Header/Header";
 import "./Listing.css"
+import API from "../../client/Client"
 
 export default function Listing(){
-    const [listDoctors, setListDoctors] = useState([
-        {
-            "name": "João da Silva",
-            "specialty": "Cardiologista",
-            "rating": 5
-        },
-        {
-            "name": "Fábio Cardoso",
-            "specialty": "Cardiologista",
-            "rating": 4
-        },
-        {
-            "name": "Carla Guedes",
-            "specialty": "Cardiologista",
-            "rating": 5
-        },
-        {
-            "name": "Sandra Tavares",
-            "specialty": "Cardiologista",
-            "rating": 5
-        },
-        {
-            "name": "Serafim Nunes",
-            "specialty": "Cardiologista",
-            "rating": 3
-        },
-        {
-            "name": "Carlos Jr.",
-            "specialty": "Cardiologista",
-            "rating": 4
-        },
-    ])
+    const [listDoctors, setListDoctors] = useState([])
+
+
+    useEffect( () =>{
+        getAllDoctors()
+
+        
+    }, [])
+
+    async function  getAllDoctors(){
+        const response = await API.get("/getAllDoctors")
+        setListDoctors(response.data)
+    }
 
     return(
         <div className="Listing-Page">

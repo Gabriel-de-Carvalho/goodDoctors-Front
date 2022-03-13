@@ -1,23 +1,35 @@
 import React from "react";
 import Header from "../Header/Header";
-import { TextField } from "@mui/material";
+import { TextField, Button } from "@mui/material";
 import "./Search.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Search(){
-
+    const navigate = useNavigate()
 
 
     return(
         <div className="Search-Page">
             <Header/>
             <div className="Search-Main">
-            <TextField
-                id="outlined-search-input"
-                label="Digite o que está sentindo"
-                autoComplete="current-password"
-                variant="standard"
-                fullWidth
-                />
+                <div className="search-field">
+                    <TextField
+                        sx = {
+                            {mb: 3}
+                        }
+                        id="outlined-search-input"
+                        label="Digite o que está sentindo"
+                        autoComplete="current-password"
+                        variant="standard"
+                        fullWidth
+                        />
+
+                    <Button sx= {{mr: 3}}variant="contained" onClick={ () => {navigate("/doctors") }}>Pesquisar</Button>
+                    <Button variant="contained" >cadastrar médico</Button>
+                </div>
+
+
+            
             </div>
             
             
