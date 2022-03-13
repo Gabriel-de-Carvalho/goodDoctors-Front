@@ -25,7 +25,7 @@ export default function Search(){
                         />
 
                     <Button sx= {{mr: 3}}variant="contained" onClick={ () => {navigate("/doctors") }}>Pesquisar</Button>
-                    <Button variant="contained" >cadastrar médico</Button>
+                    <Button variant="contained" onClick={ () => {navigate("/signup") }}>Cadastrar Médico</Button>
                 </div>
 
 
