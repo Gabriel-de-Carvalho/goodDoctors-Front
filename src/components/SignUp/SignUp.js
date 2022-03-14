@@ -32,7 +32,6 @@ export default function SignUp(){
 
         const infoChange = {...doctor, [e.target.id]: inputValue};
         setDoctor(infoChange)
-        console.log(doctor)
     }
 
     async function createDoctor(newDoctor){
