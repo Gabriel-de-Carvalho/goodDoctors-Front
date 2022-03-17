@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/goodDoctors-Front/static/css/main.bf6e5107.css",
-    "main.js": "/goodDoctors-Front/static/js/main.42f40e9b.js",
+    "main.js": "/goodDoctors-Front/static/js/main.24f3a253.js",
     "static/js/787.d1cc23bd.chunk.js": "/goodDoctors-Front/static/js/787.d1cc23bd.chunk.js",
     "static/media/logo.svg": "/goodDoctors-Front/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/goodDoctors-Front/index.html",
     "main.bf6e5107.css.map": "/goodDoctors-Front/static/css/main.bf6e5107.css.map",
-    "main.42f40e9b.js.map": "/goodDoctors-Front/static/js/main.42f40e9b.js.map",
+    "main.24f3a253.js.map": "/goodDoctors-Front/static/js/main.24f3a253.js.map",
     "787.d1cc23bd.chunk.js.map": "/goodDoctors-Front/static/js/787.d1cc23bd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bf6e5107.css",
-    "static/js/main.42f40e9b.js"
+    "static/js/main.24f3a253.js"
   ]
 }
