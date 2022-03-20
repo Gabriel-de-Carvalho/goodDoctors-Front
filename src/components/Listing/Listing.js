@@ -2,22 +2,26 @@ import React, { useState, useEffect } from "react";
 import DoctorCard from "../DoctorCard/DoctorCard";
 import Header from "../Header/Header";
 import "./Listing.css"
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import API from "../../client/Client"
 
 export default function Listing(){
     const [listDoctors, setListDoctors] = useState([])
-    const state = useLocation();
+    const searchInfo = useLocation();
+    const navigate = useNavigate();
 
     useEffect( () =>{
         getAllDoctors()
-        console.log(state.state)
-        
     }, [])
 
     async function  getAllDoctors(){
-        const response = await API.get("/getByPathologies/" + state.state)
+        const response = await API.get("/getByPathologies/" + searchInfo.state)
         setListDoctors(response.data)
+    }
+
+    function navigateListing(doctor){
+        const setInfo = doctor
+        navigate("/doctorPage", {state: setInfo}) 
     }
 
     return(
@@ -25,9 +29,9 @@ export default function Listing(){
             <Header/>
             <div className="Listing-Main">
                {listDoctors.map(
-                   (doctor) => <DoctorCard name = {doctor.name} specialty = {doctor.specialty} rating = {doctor.rating}/>
+                   (doctor) => <DoctorCard name = {doctor.name} specialty = {doctor.specialty} rating = {doctor.rating} onClick={ () => {navigateListing(doctor)}}/>
                )}
             </div>
         </div>
     )
-}
+} 

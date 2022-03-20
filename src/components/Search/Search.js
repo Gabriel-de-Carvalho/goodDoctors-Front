@@ -13,7 +13,6 @@ export default function Search(){
         setSearchParam(newSearchParam)
     }
 
-
     function navigateListing(){
         const stateParam = searchParam
         navigate("/doctors", {state: stateParam}) 
@@ -38,13 +37,8 @@ export default function Search(){
 
                     <Button sx= {{mr: 3}}variant="contained" onClick={ () => {navigateListing()}}>Pesquisar</Button>
                     <Button variant="contained" onClick={ () => {navigate("/signup") }}>Cadastrar Médico</Button>
-                </div>
-
-
-            
+                </div>      
             </div>
-            
-            
         </div>
     )
 }
