@@ -4,7 +4,7 @@ import "./DoctorCard.css"
 
 export default function DoctorCard(props){
     return(
-        <div className="DoctorCard-Main">
+        <div onClick={props.onClick} className="DoctorCard-Main">
             <span class="dot"></span>
             <p className="doctorName">{props.name}</p>
             <p className="doctorSpecialty"> {props.specialty}</p>
