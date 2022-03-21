@@ -18,3 +18,7 @@
 .search-field TextField{
     margin-bottom: 2vh;
 }
+
+.searchOptions FormControl{
+    margin-bottom: 2vh;
+}

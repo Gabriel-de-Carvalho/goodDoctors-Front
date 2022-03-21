@@ -11,12 +11,19 @@ export default function Listing(){
     const navigate = useNavigate();
 
     useEffect( () =>{
-        getAllDoctors()
+        getAllDoctors(searchInfo)
     }, [])
 
-    async function  getAllDoctors(){
-        const response = await API.get("/getByPathologies/" + searchInfo.state)
-        setListDoctors(response.data)
+    async function  getAllDoctors(search){
+
+        if(search.state.searchType === "symptoms"){
+            const response = await API.get("/getByPathologies/" + search.state.searchParam)
+            setListDoctors(response.data)
+        }else{
+            const response = await API.get("/getBySpecialty/" + search.state.searchParam)
+            setListDoctors(response.data)
+        }
+
     }
 
     function navigateListing(doctor){
