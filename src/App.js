@@ -7,11 +7,11 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/" element={<Search/>}/>
-        <Route path="doctors" element={<Listing/>} />  
-        <Route path="signup" element={<SignUp/>} />
+        <Route path="/" exact element={<Search/>}/>
+        <Route path="/doctors" exact element={<Listing/>} />  
+        <Route path="/signup" exact element={<SignUp/>} />
       </Routes>
     </BrowserRouter>
   );

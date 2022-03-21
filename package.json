@@ -1,7 +1,7 @@
 {
   "name": "good_doctors",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://Gabriel-de-Carvalho.github.io/goodDoctors-Front",
   "dependencies": {
     "@emotion/react": "^11.8.1",

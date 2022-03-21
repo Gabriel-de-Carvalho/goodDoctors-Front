@@ -11,7 +11,6 @@ export default function Listing(){
 
     useEffect( () =>{
         getAllDoctors()
-        console.log(state.state)
         
     }, [])
 

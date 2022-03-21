@@ -9,7 +9,6 @@ export default function Search(){
     const [searchParam, setSearchParam] = useState("");
 
     function handleChangeSearchParam(newSearchParam){
-        console.log(searchParam)
         setSearchParam(newSearchParam)
     }
 
