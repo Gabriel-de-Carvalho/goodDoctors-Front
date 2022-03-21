@@ -12,10 +12,6 @@ export default function Listing(){
 
     useEffect( () =>{
         getAllDoctors()
-<<<<<<< HEAD
-        
-=======
->>>>>>> 8c65f8597c4978955eb3d6fa8609fcc52558e893
     }, [])
 
     async function  getAllDoctors(){

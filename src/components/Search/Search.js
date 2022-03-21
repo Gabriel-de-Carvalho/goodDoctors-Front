@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Header from "../Header/Header";
 import { TextField, Button } from "@mui/material";
 import "./Search.css";
 import { useNavigate } from "react-router-dom";
+import { positions } from "@mui/system";
 
 export default function Search(){
     const navigate = useNavigate()
@@ -12,8 +13,17 @@ export default function Search(){
         setSearchParam(newSearchParam)
     }
 
+    useEffect(() =>{
+        navigator.geolocation.getCurrentPosition(showPositions)
+    }, [])
+
+    function showPositions(position){
+        console.log(position)
+    }
+
     function navigateListing(){
-        const stateParam = searchParam
+        const stateParam = searchParam.replaceAll(" ", "_")
+        console.log(stateParam)
         navigate("/doctors", {state: stateParam}) 
     }
 
