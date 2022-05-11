@@ -44,8 +44,9 @@ export default function Search(){
                         fullWidth
                         />
 
-                    <Button sx= {{mr: 3}}variant="contained" onClick={ () => {navigateListing()}}>Pesquisar</Button>
-                    <Button variant="contained" onClick={ () => {navigate("/signup") }}>Cadastrar Médico</Button>
+                    <Button sx= {{mr: 3}} variant="contained" onClick={ () => {navigateListing()}}>Pesquisar</Button>
+                    <Button sx= {{mr: 3}} variant="contained" onClick={ () => {navigate("/signup") }}>Cadastrar Médico</Button>
+                    <Button variant="contained" onClick={ () => {navigate("/signupPacient") }}>Cadastrar Paciente</Button> 
                 </div>      
             </div>
         </div>
