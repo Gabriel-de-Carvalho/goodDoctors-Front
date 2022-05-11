@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Header from "../Header/Header";
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, Radio, FormControlLabel, FormControl, FormLabel, RadioGroup } from "@mui/material";
 import "./Search.css";
 import { useNavigate } from "react-router-dom";
 import { positions } from "@mui/system";
@@ -8,23 +8,31 @@ import { positions } from "@mui/system";
 export default function Search(){
     const navigate = useNavigate()
     const [searchParam, setSearchParam] = useState("");
+    const [searchType, setSearchType] = useState();
 
     function handleChangeSearchParam(newSearchParam){
         setSearchParam(newSearchParam)
     }
 
-    useEffect(() =>{
-        navigator.geolocation.getCurrentPosition(showPositions)
-    }, [])
+    const handleChangeSearchType = (event) => {
+        setSearchType(event.target.value)
+      };
 
-    function showPositions(position){
-        console.log(position)
-    }
+    // useEffect(() =>{
+    //     navigator.geolocation.getCurrentPosition(showPositions)
+    // }, [])
+
+    // function showPositions(position){
+    //     console.log(position)
+    // }
 
     function navigateListing(){
-        const stateParam = searchParam.replaceAll(" ", "_")
-        console.log(stateParam)
-        navigate("/doctors", {state: stateParam}) 
+        const search = {
+            searchParam : searchParam.replaceAll(" ", "_"),
+            searchType: searchType
+        }
+
+        navigate("/doctors", {state: search}) 
     }
 
     return(
@@ -32,6 +40,13 @@ export default function Search(){
             <Header/>
             <div className="Search-Main">
                 <div className="search-field">
+                    <FormControl className="searchOptions" component="fieldset">
+                        <FormLabel component="legend">Deseja pesquisar como?</FormLabel>
+                            <RadioGroup aria-label="searchType" name="searchType" value={searchType} onChange={handleChangeSearchType}>
+                                <FormControlLabel value="symptoms" control={<Radio />} label="Sintomas" />
+                                <FormControlLabel value="speciality" control={<Radio />} label="Especialidade" />
+                            </RadioGroup>
+                    </FormControl>
                     <TextField
                         sx = {
                             {mb: 3}
