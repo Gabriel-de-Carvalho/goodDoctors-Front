@@ -15,7 +15,7 @@ export default function SignUpPacient() {
         cpf: "00000000000",
         number: "number",
         street:"rua",
-        address: "address",
+        adress: "address",
         password: "phone",
         city: "city",
         zipCode: "cep",
@@ -34,6 +34,7 @@ export default function SignUpPacient() {
         // }
 
         const infoChange = { ...pacient, [e.target.id]: inputValue };
+        console.log(infoChange)
         setPacient(infoChange)
     }
 
@@ -116,7 +117,7 @@ export default function SignUpPacient() {
                         onChange={updatePacientSignUp}
                         fullWidth
                         required
-                        id="address"
+                        id="adress"
                         label="Bairro"
                         type="search"
                         variant="standard"
@@ -136,7 +137,7 @@ export default function SignUpPacient() {
                         onChange={updatePacientSignUp}
                         fullWidth
                         required
-                        id="cep"
+                        id="zipCode"
                         label="CEP"
                         type="search"
                         variant="standard"
