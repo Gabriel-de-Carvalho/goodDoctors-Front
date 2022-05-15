@@ -21,7 +21,7 @@ export default function SignUpPacient() {
         zipCode: "cep",
         phone: "(99) 9999-9999"
     })
-    
+    //
     function splitSymptoms(symptoms) {
         return symptoms.split(",")
     }
