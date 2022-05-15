@@ -8,6 +8,7 @@ export default function DoctorCard(props){
             <span class="dot"></span>
             <p className="doctorName">{props.name}</p>
             <p className="doctorSpecialty"> {props.specialty}</p>
+            <p className="distancia">{props.distancia} km</p>
             {/* <Rating name="read-only" value={props.rating} readOnly/> */}
         </div>
     )

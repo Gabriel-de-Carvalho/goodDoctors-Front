@@ -18,16 +18,33 @@ export default function Listing(){
 
         if(search.state.searchType === "symptoms"){
             const response = await API.get("/getByPathologies/" + search.state.searchParam)
+            const newDoctors = response.data
+            for( let i = 0; i < newDoctors.length; i++){
+                newDoctors[i] = {...newDoctors[i], distance: distanciaRandom()}
+            }
+
             setListDoctors(response.data)
         }else{
             const response = await API.get("/getBySpecialty/" + search.state.searchParam)
+            const newDoctors = response.data
+            for( let i = 0; i < newDoctors.length; i++){
+                newDoctors[i] = {...newDoctors[i], distance: distanciaRandom()}
+            }
+
             setListDoctors(response.data)
         }
 
     }
 
+    function sortDoctors(){
+       return listDoctors.sort((a,b) => a.distance - b.distance)
+    }
+
     function distanciaRandom(){
-        return
+        if(Math.random() < 0.5){
+            return Math.round(Math.random() * 100) / 10 
+        }
+        return Math.round(Math.random() * 10 + 0.7) / 10 
     }
 
     function navigateListing(doctor){
@@ -39,8 +56,8 @@ export default function Listing(){
         <div className="Listing-Page">
             <Header/>
             <div className="Listing-Main">
-               {listDoctors.map(
-                   (doctor) => <DoctorCard name = {doctor.name} specialty = {doctor.specialty} rating = {doctor.rating} onClick={ () => {navigateListing(doctor)}}/>
+               {sortDoctors().map(
+                   (doctor) => <DoctorCard name = {doctor.name} specialty = {doctor.specialty} rating = {doctor.rating} distancia={doctor.distance} onClick={ () => {navigateListing(doctor)}}/>
                )}
             </div>
         </div>
