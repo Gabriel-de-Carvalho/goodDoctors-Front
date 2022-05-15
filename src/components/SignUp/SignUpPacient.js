@@ -59,6 +59,17 @@ export default function SignUpPacient() {
                         type="search"
                         variant="standard"
                     />
+
+                    <TextField
+                        sx={{ mb: 3}}
+                        onChange={updatePacientSignUp}
+                        fullWidth
+                        required
+                        id="cpf"
+                        label="Cpf"
+                        type="search"
+                        variant="standard"
+                    />
                     <TextField
                         sx={{ mb: 3 }}
                         onChange={updatePacientSignUp}
