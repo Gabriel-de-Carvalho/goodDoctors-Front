@@ -10,7 +10,7 @@ import API from "../../client/Client";
 export default function SignUpPacient() {
     const [pacient, setPacient] = useState({
         name: "name",
-        age: "18",
+        age: "2017-05-24",
         email: "email@gmail.com",
         cpf: "00000000000",
         number: "number",
