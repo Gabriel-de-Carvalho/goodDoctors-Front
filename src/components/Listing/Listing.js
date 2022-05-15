@@ -26,6 +26,10 @@ export default function Listing(){
 
     }
 
+    function distanciaRandom(){
+        return
+    }
+
     function navigateListing(doctor){
         const setInfo = doctor
         navigate("/doctorPage", {state: setInfo}) 
