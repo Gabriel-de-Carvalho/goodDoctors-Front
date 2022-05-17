@@ -5,6 +5,16 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
     margin: 0;
-    text-align: center;
+    justify-items: center;
+    grid-template-columns: 85% 15%;
     padding: 3vh 0;
+    display: grid;   
 }
+
+
+
+
+
+
+
+
