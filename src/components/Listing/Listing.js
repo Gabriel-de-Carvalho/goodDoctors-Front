@@ -57,7 +57,7 @@ export default function Listing(){
             <Header/>
             <div className="Listing-Main">
                {sortDoctors().map(
-                   (doctor) => <DoctorCard name = {doctor.name} specialty = {doctor.specialty} rating = {doctor.rating} distancia={doctor.distance} onClick={ () => {navigateListing(doctor)}}/>
+                   (doctor) => <DoctorCard name = {doctor.name} specialty = {doctor.specialty} distancia={doctor.distance} onClick={ () => {navigateListing(doctor)}}/>
                )}
             </div>
         </div>

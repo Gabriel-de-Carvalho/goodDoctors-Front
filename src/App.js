@@ -9,10 +9,11 @@ import DoctorPage from './components/DoctorPage/DoctorPage';
 import { UserContext, user } from './session/user-context';
 import { useState } from 'react';
 import SignIn from './components/SignIn/SignIn';
+import UserView from './components/UserView/UserView';
 
 function App() {
     const [userLogged, setUserLogged] = useState(user);
-    const [isUserLogged, setIsUserLogged] = useState(false);
+    const [isUserLogged, setIsUserLogged] = useState(true);
     
     function updateUser(user){
       if(isUserLogged){
@@ -34,6 +35,7 @@ function App() {
         <Route path="/signupPacient" exat element={<SignUpPacient/>}/>
         <Route path="/doctorPage" exact element={<DoctorPage/>}/>
         <Route path="/signIn" exact element={<SignIn/>}/>
+        <Route path="/userView" exact element={<UserView/>}/>
       </Routes>
     </BrowserRouter>
     </UserContext.Provider>
