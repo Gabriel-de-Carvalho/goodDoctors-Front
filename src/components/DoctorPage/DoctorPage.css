@@ -9,3 +9,13 @@
 .phone{
     margin-top: 3vh;
 }
+
+.comment-section{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2vw 38vw 2vw;
+    width: 25%;
+}
