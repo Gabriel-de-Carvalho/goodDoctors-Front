@@ -13,6 +13,10 @@ export default function Header() {
         navigate("/signIn")
     }
 
+    function navigateUserView(){
+        navigate("/userView");
+    }
+
     const style = {
         marginLeft: "20%",
         margin:0
@@ -23,7 +27,7 @@ export default function Header() {
              <h1 style={style}>Good Doctors</h1>
              <div classname="user-header">
                  
-                { user.isLogged ? <span>oi</span> : <span onClick={navigateSignInPage}>Acessar minha conta</span> }
+                { user.isLogged ? <span onClick={navigateUserView}>Ver meu perfil</span> : <span onClick={navigateSignInPage}>Acessar minha conta</span> }
              </div>
         </div>
     )
