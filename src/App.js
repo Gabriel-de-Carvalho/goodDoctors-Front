@@ -13,10 +13,10 @@ import UserView from './components/UserView/UserView';
 
 function App() {
     const [userLogged, setUserLogged] = useState(user);
-    const [isUserLogged, setIsUserLogged] = useState(true);
+    const [isUserLogged, setIsUserLogged] = useState(false);
     
     function updateUser(user){
-      if(isUserLogged){
+      if(!isUserLogged){
         setUserLogged(user)
         setIsUserLogged(true);
       } else {

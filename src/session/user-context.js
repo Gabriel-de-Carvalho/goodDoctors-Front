@@ -13,7 +13,8 @@ export const user = {
         "phone": "83 98151-0181",
         "createdAt": "2022-05-15T18:57:24.015Z",
         "updatedAt": "2022-05-15T18:57:24.015Z",
-        "__v": 0
+        "__v": 0,
+        "token": "bearer "
 
 }
 

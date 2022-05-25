@@ -19,7 +19,7 @@ export default function Header() {
 
     const style = {
         marginLeft: "20%",
-        margin:0
+        margin:0 
     }
 
     return(
