@@ -42,6 +42,7 @@ export default function DoctorPage(){
 
     useEffect( () =>{
         console.log(user)
+        console.log(state)
         getComments()
     },[])
 
